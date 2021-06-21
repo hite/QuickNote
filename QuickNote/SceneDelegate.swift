@@ -47,6 +47,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        print("continue userActivity = \(userActivity)")
+    }
+    
+    func scene(_ scene: UIScene, willContinueUserActivityWithType userActivityType: String) {
+        print("willContinueUserActivityWithType = \(userActivityType)")
+    }
+    
+    func scene(_ scene: UIScene, didFailToContinueUserActivityWithType userActivityType: String, error: Error) {
+        print("didFailToContinueUserActivityWithType = \(error)")
+    }
 }
 
